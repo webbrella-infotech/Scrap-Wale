@@ -24,16 +24,32 @@ struct WebView: UIViewRepresentable {
         let webView = WKWebView(frame: .zero, configuration: config)
         webView.navigationDelegate = context.coordinator
         webView.uiDelegate = context.coordinator
+        webView.allowsBackForwardNavigationGestures = true
         webView.load(URLRequest(url: url))
         return webView
     }
 
+    // 🔑 Reload page when url changes
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        // Not needed unless the URL needs to change dynamically
+        if uiView.url != url {
+            uiView.load(URLRequest(url: url))
+        }
     }
 
     class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, UIDocumentPickerDelegate {
         private var completionHandler: (([URL]?) -> Void)?
+
+        // Keep all navigation inside WebView
+        func webView(_ webView: WKWebView,
+                     decidePolicyFor navigationAction: WKNavigationAction,
+                     decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.navigationType == .linkActivated,
+               let _ = navigationAction.request.url {
+                decisionHandler(.allow) // always open inside WebView
+            } else {
+                decisionHandler(.allow)
+            }
+        }
 
         // Handle <input type="file"> for file upload (iOS 18.4+ only)
         @available(iOS 18.4, *)

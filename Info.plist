@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <!-- App Name -->
     <key>CFBundleName</key>
     <string>Scrap Wale</string>
 
-    <!-- Add App Transport Security exception here -->
+    <!-- Allow HTTP loads for scrap-wale.in -->
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSExceptionDomains</key>

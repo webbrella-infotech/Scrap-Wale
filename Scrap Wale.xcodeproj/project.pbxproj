@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildRule section */
+		F6DBE9452E4DCD46000AAC5C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.rkassets;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# realitytool\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		F6EC33ED2E28F42A008B3850 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F693B5662E6579AA00B900E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6EC33DF2E28F429008B3850 /* Scrap Wale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scrap Wale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EC33EC2E28F42A008B3850 /* Scrap WaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scrap WaleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EC33F62E28F42A008B3850 /* Scrap WaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scrap WaleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +94,7 @@
 				F6EC33EF2E28F42A008B3850 /* Scrap WaleTests */,
 				F6EC33F92E28F42A008B3850 /* Scrap WaleUITests */,
 				F6EC33E02E28F429008B3850 /* Products */,
+				F693B5662E6579AA00B900E0 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +120,7 @@
 				F6EC33DD2E28F429008B3850 /* Resources */,
 			);
 			buildRules = (
+				F6DBE9452E4DCD46000AAC5C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -397,7 +414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H489U5M6KD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -413,7 +430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.scrapwale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -430,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H489U5M6KD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -446,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.scrapwale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

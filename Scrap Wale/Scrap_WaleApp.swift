@@ -11,7 +11,7 @@ import SwiftUI
 struct Scrap_WaleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
